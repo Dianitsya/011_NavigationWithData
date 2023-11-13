@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">LATIHAN6</string>
+    <string name="nama">nama</string>
+    <string name="noHp">noHp</string>
+    <string name="alamat">alamat</string>
+    <string name="btn_submit">submit</string>
     <string name="back_button">kembali</string>
     <string name="confirm">konfirmasi</string>
     <string name="next">lanjut</string>
