@@ -84,9 +84,16 @@ fun EsJumboApp(
                     onNextButtonClicked = { navController.navigate(PengelolaHalaman.Form.name) })
                 }
             composable(PengelolaHalaman.Form.name){
-                HalamanForm(onSubmitBUttonClicked = {
+                HalamanForm(
+                    onSubmitBUttonClicked = {
                     viewModel.setContact(it)
-                    navController.navigate(PengelolaHalaman.Rasa.name)},)
+                    navController.navigate(PengelolaHalaman.Rasa.name)},
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToHome(
+                            viewModel,
+                            navController
+                        )
+                    })
             }
                 composable(route = PengelolaHalaman.Rasa.name) {
                 val context = LocalContext.current
