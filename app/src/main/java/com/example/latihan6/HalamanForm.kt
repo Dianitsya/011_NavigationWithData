@@ -55,13 +55,18 @@ fun HalamanForm(
             })
         Spacer(modifier = Modifier.padding(2.dp))
 
-        Row(
+        Column(
             modifier = Modifier
                 .weight(1f, false)
-                .padding(dimensionResource(R.dimen.padding_medium))
+                .padding(dimensionResource(R.dimen.padding_medium)) ,
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
+
         ) {
-            Column(
-                verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = dimensionResource(R.dimen.padding_medium)),
+                horizontalArrangement = Arrangement.Center,
             ) {
                 Button(onClick = onCancelButtonClicked) {
                     Text(stringResource(R.string.cancel))

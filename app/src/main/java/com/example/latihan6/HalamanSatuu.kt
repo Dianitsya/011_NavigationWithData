@@ -99,11 +99,8 @@ fun HalamanSatuu(
         )
         Row(
             modifier = Modifier
-                .fillMaxWidth()
+                .weight(1f, false)
                 .padding(dimensionResource(R.dimen.padding_medium))
-                .weight(1f, false),
-            horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
-            verticalAlignment = Alignment.Bottom
         ) {
             OutlinedButton(modifier = Modifier.weight(1f), onClick = onCancelButtonClicked) {
                 Text(stringResource(R.string.cancel))
