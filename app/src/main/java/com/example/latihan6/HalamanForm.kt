@@ -38,16 +38,23 @@ fun HalamanForm(
     var listData: MutableList<String> = mutableListOf(nama, noHp, alamat)
 
     Column(
+        
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
     ) {
+        Text(text = "Data Pelanggan ")
+        Spacer(modifier = Modifier.padding(5.dp))
         OutlinedTextField(
             value = nama, onValueChange = { nama = it },
             label = { Text(text = stringResource(id = R.string.nama)) })
+        Spacer(modifier = Modifier.padding(5.dp))
+
         OutlinedTextField(
             value = noHp, onValueChange = { noHp = it },
             label = { Text(text = stringResource(id = R.string.noHp)) })
+        Spacer(modifier = Modifier.padding(5.dp))
+
         OutlinedTextField(
             value = alamat, onValueChange = { alamat = it },
             label = {
@@ -58,8 +65,8 @@ fun HalamanForm(
         Column(
             modifier = Modifier
                 .weight(1f, false)
-                .padding(dimensionResource(R.dimen.padding_medium)) ,
-            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
+                .padding(dimensionResource(R.dimen.padding_small)) ,
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium))
 
         ) {
             Row(
@@ -72,7 +79,7 @@ fun HalamanForm(
                     Text(stringResource(R.string.cancel))
                 }
                 Button(onClick = { onSubmitBUttonClicked(listData) }) {
-                    Text(text = stringResource(id = R.string.btn_submit))
+                    Text(text = stringResource(id = R.string.next))
                 }
 
             }
